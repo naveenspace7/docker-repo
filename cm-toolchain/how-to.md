@@ -1,5 +1,7 @@
 # How to use the docker image
 
+Current status: cross-compiler works, stlink utility works, segger - pending, install nrf sdk - pending
+
 Use the following structure for the source:
 
 ```
@@ -13,3 +15,6 @@ Use the following structure for the source:
 
 Run the following command:
 `$ sudo docker run -v $(pwd):/mnt arm-build make`
+
+`$ sudo docker run --device=/dev/bus/usb/002/006 naveenspace7/arm-cm-toolchain:v2 st-info --probe
+`
