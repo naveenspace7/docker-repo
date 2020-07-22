@@ -2,7 +2,7 @@ FROM ubuntu
 
 RUN apt update
 
-RUN apt -y install build-essential tar wget make unzip
+RUN apt -y install build-essential tar wget make unzip cppcheck
 RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install cmake
 
 RUN mkdir /temp && cd temp && wget https://github.com/google/googletest/archive/master.zip
