@@ -12,4 +12,6 @@ RUN cd /temp/googletest-master && mkdir build
 
 RUN cd /temp/googletest-master/build && cmake .. -DBUILD_SHARED_LIBS=ON -DINSTALL_GTEST=ON -DCMAKE_INSTALL_PREFIX:PATH=/usr && make && make install && ldconfig
 
+RUN apt -y install clang-tidy
+
 WORKDIR /mnt 
