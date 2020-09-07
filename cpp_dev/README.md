@@ -24,3 +24,12 @@ ii. Run the following command from the desired directory of the source.
 
 `$ sudo docker run -v $(pwd):/mnt cpp-dev cppcheck ca_demo.cpp` 
 
+3. Clang-Tidy
+
+i. Navigate to the directory where the source is to be analyzed.
+
+ii. Run the following command from the desired directory of the source (this is the simplest case, for more advanced usage see the clang-tidy documentation and append it with the docker command).
+
+`$ sudo docker run -v $(pwd):/mnt clang-tidy -checks='*modernize*' test.cpp -- `
+
+
